@@ -1,0 +1,55 @@
+.hi {
+  font-size: 33px;
+}
+
+.guilds-list {
+  margin-left: 50px;
+  margin-top: 5px;
+}
+
+.guilds-list .guild-item {
+  margin-right: 2%;
+  margin-bottom: 20px;
+  padding: 12px 12px 12px;
+  border-radius: 6px;
+  background-color: none;
+  max-width: 170px;
+  max-height: 240px;
+  overflow: hidden;
+  -webkit-transition: top 0.4s ease 0s;
+  transition: top 0.4s ease 0s;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: relative;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.guilds-list .guild-item:hover {
+  -webkit-transition: top 0.4s ease 0s;
+  transition: top 0.4s ease 0s;
+  position: relative;
+  background-color: #20273f;
+}
+
+.guilds-list .guild-item img {
+  width: 150.8px;
+  height: 150.8px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+  -webkit-box-shadow: -3px 0px 48px -3px #00050f;
+  box-shadow: -3px 0px 48px -3px #00050f;
+}
+
+.guilds-list .guild-item p {
+  font-size: 17px;
+  text-align: center;
+  padding-top: 10px;
+  color: #e5e5e5;
+  max-height: 200px;
+  overflow: hidden;
+}
+/*# sourceMappingURL=my_main.css.map */
