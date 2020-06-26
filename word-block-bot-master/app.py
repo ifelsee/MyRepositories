@@ -14,8 +14,6 @@ mydb = mysql.connector.connect(
     database="Bot"
 )
 mycursor = mydb.cursor()
-
-
 #mycursor.execute("CREATE TABLE bot_guilds(guild_id TEXT(20))")
 
 

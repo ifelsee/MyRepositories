@@ -2,7 +2,7 @@ from allauth.socialaccount.providers.discord.provider import DiscordProvider
 
 from allauth.socialaccount.models import SocialAccount,SocialToken
 import decimal
-import requests 
+import requests
 
 def  all_administrator_guilds(request):
 
@@ -16,13 +16,13 @@ def  all_administrator_guilds(request):
         'Content-Type': 'application/json',
     }
     guilds_data = requests.get(guilds_url, headers=headers).json()
-    guilds_data_len = len(guilds_data) 
- 
+    guilds_data_len = len(guilds_data)
+
     def guild_content(guilds_data):
         guilds_len = len(guilds_data)
         guilds_while_len = 0
         guilds_administrator = []
-        while guilds_while_len< guilds_len : 
+        while guilds_while_len< guilds_len :
             guild_name = str(guilds_data[guilds_while_len]["name"])
             guild_id = str(guilds_data[guilds_while_len]["id"])
             guild_owner = str(guilds_data[guilds_while_len]["owner"])
@@ -37,7 +37,7 @@ def  all_administrator_guilds(request):
             """
             if guild_permissions == "2147483647":
                 guild_profile = guild_name,guild_owner,guild_permissions,guild_id,guild_icon
-                guilds_administrator.append(guild_profile) 
+                guilds_administrator.append(guild_profile)
             else:
                 pass
             guilds_while_len += 1
@@ -49,4 +49,3 @@ def  all_administrator_guilds(request):
     guilds_administrator = guild_content(guilds_data)
 
     return guilds_administrator
-    

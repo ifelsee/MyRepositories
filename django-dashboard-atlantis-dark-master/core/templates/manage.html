@@ -10,10 +10,10 @@
 <h1>{{guildName}}</h1>
 <img src="https://cdn.discordapp.com/icons/{{guildİd}}/{{guildİcon}}.png?size=256">
 
-<form  method="post">
+<form class="form-group" style="max-width: 500px;"  method="post">
   {% csrf_token %}
   {{ form.as_p}}
-  <input type="submit" name="" value="gönder">
+  <input type="submit" name="" class="btn btn-primary mb-2" value="gönder">
 </form>
 
 {% endblock content %}

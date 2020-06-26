@@ -16,8 +16,13 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('guild_id', models.CharField(max_length=18)),
+                ('guild_name', models.CharField(max_length=18)),
                 ('command', models.CharField(max_length=100)),
                 ('response', models.CharField(max_length=100)),
+                ('dm_response', models.CharField(max_length=100)),
+                ('allowed_roles', models.CharField(max_length=100)),
+                ('ignored_roles', models.CharField(max_length=100)),
+                ('response_channel', models.CharField(max_length=100)),
             ],
         ),
     ]
